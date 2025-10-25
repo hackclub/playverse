@@ -3,6 +3,7 @@
   --foreground: #ffffff;
   --muted-foreground: #a0a0a0;
   --accent: #00ff88;
+  --card-bg: #121212;
 }
 
 * {
@@ -12,15 +13,26 @@
       font-family: 'Inter', sans-serif, 'JetBrains Mono';
     }
 
+    body{
+         background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+    }
+
     section{
-        padding: 60px 20px;
+        padding: 80px 20px;
         
     }
     .hero{
         text-align: center;
         padding: 100px 20px;
-        background-color: var(--background);
+        background: radial-gradient(circle at 30% 20%, #0f0f0f, #000);
 
+    }
+
+    .hero-content{
+         position: relative;
+  z-index: 10;
     }
 
     p{
@@ -50,12 +62,15 @@
     }
 
     .btnn{
-        background-color: var(--accent);
-        color: var(--background);
-        padding : 11px 22px;
-        border-radius: 8px;
-        font-weight: 600;
-        cursor:pointer;
+     background-color: var(--accent);
+  color: var(--background);
+  padding: 12px 26px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  display: inline-block;
     
 
     }
@@ -71,18 +86,19 @@
     grid-template-columns: 2fr 2fr;
     gap: 1.5rem;
     max-width: 80rem;
+      margin: 0 auto;
   
   
 
 }
 
 .faq-card{
-    background-color: var(--background);
+    background-color: var(--card-bg);
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin:0;
+    transition: transform 0.3s, box-shadow 0.3s;    
+    
 
 }
 
@@ -104,8 +120,10 @@
 }
 .about{
     max-width: 800px;
-    margin: 0 auto 40px auto;
+    margin: 40px auto 40px auto;
     text-align: center;
+    padding: 60px 20px;
+    
 }
 .about p{
     font-size: 18px;
@@ -119,18 +137,66 @@
     padding: 60px 20px;
 }
 
+
+
+.Process{
+   background-color: var(--background);
+    margin: 0 auto;
+    text-align: center;
+       display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ 
+}
+.steps{
+     max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    column-gap: 35px;
+    margin-top: 40px;
+     
+}
+.step{
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    flex: 1 1 calc(33% - 40px);
+    min-width: 250px;
+}
+
 .howitworks{
     background-color: var(--background);
     padding: 60px 20px;
 
-    
-
-
 }
-.howitworks p{
+
+.guidelines{
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center;
+
+
+    
+}
+.guidelines p{
     color: var(--muted-foreground);
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
-    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #a0a0a033;
+}
+
+
+@media (max-width:650px){
+    .faq{
+        grid-template-columns: 1fr;
+    }
+    .hero{
+        padding: 60px 20px;
+    }
 }
