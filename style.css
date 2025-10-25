@@ -68,13 +68,14 @@
 
 .faq{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 2fr 2fr;
     gap: 1.5rem;
     max-width: 80rem;
   
   
 
 }
+
 .faq-card{
     background-color: var(--background);
     padding: 20px;
@@ -95,4 +96,41 @@
     line-height: 1.5;
       margin:0;
 
+}
+
+.faq-card a{
+    color:var(--accent);
+    text-decoration: underline;
+}
+.about{
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+.about p{
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--muted-foreground);
+}
+
+
+.FAQmain{
+    background-color: var(--background);
+    padding: 60px 20px;
+}
+
+.howitworks{
+    background-color: var(--background);
+    padding: 60px 20px;
+
+    
+
+
+}
+.howitworks p{
+    color: var(--muted-foreground);
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
 }
