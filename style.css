@@ -29,8 +29,10 @@
     .hero{
         text-align: center;
      background: linear-gradient(  135deg, #0a0a0a 0%,  #111111 50%, #0f1a14 100%);
-
+   
+      
     }
+
 
     .hero-content{
         padding: 12rem 3rem;
@@ -307,5 +309,14 @@ overflow: hidden;
     }
     75%{
         transform: translateY(-40px) rotate(270deg);
+    }
+}
+
+@keyframes logoFloat{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
     }
 }
