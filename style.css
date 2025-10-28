@@ -29,8 +29,10 @@
     .hero{
         text-align: center;
      background: linear-gradient(  135deg, #0a0a0a 0%,  #111111 50%, #0f1a14 100%);
-
+   
+      
     }
+
 
     .hero-content{
         padding: 12rem 3rem;
@@ -249,5 +251,75 @@ footer p{
     }
     .hero{
         padding: 60px 20px;
+    }
+    .ascent{
+        font-size: 48px;
+    }
+}
+
+
+
+/* Android ICON */
+
+.floating-icons{
+    position:fixed;
+top: 0;
+left:0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+z-index: 1;
+overflow: hidden;
+
+}
+
+.an-icon{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
+    animation: float 19s infinite ease-in-out;
+}
+
+.icon1{
+    top: 10%;
+    left: 15%;
+    animation-duration: 15s;
+    animation-delay: 0s;
+}
+.icon2{
+    top: 40%;
+    left: 70%;
+    animation-duration: 25s;
+        animation-delay: 5s;
+}
+.icon3{
+    top: 75%;
+    left: 40%;
+    animation-duration: 30s;
+        animation-delay: 10s;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0px) rotate(0deg);
+    }
+    25%{
+        transform: translateY(-40px) translateX(-10px) rotate(90deg);
+    }
+    50%{
+        transform: translateY(-80px)translateX(10px) rotate(180deg);
+    }
+    75%{
+        transform: translateY(-40px) rotate(270deg);
+    }
+}
+
+@keyframes logoFloat{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
     }
 }

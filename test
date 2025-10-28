@@ -253,5 +253,9 @@ footer p{
     }
     .hero{
         padding: 60px 20px;
+
+    }
+    .ascent{
+        font-size: 48px;
     }
 }
